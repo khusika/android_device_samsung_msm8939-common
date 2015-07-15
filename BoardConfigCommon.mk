@@ -31,7 +31,6 @@ TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 
 # Architecture
 TARGET_CPU_VARIANT := cortex-a53
-TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
 # File System
