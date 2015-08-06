@@ -13,6 +13,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit from qcom-common
+-include device/samsung/qcom-common/BoardConfigCommon.mk
+
 VENDOR_PATH := device/samsung/msm8939-common
 
 TARGET_SPECIFIC_HEADER_PATH := $(VENDOR_PATH)/include
@@ -25,14 +28,9 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
 
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
-TARGET_NO_BOOTLOADER := true
 
 # Architecture
-TARGET_ARCH := arm
-TARGET_CPU_ABI  := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_SMP := true
 ARCH_ARM_HAVE_TLS_REGISTER := true
 
@@ -88,9 +86,6 @@ TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 # Audio
 BOARD_USES_ALSA_AUDIO := true
-
-# Healthd
-BOARD_HAL_STATIC_LIBRARIES := libhealthd.qcom
 
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true

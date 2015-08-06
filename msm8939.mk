@@ -148,3 +148,5 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     keystore.msm8916
 
+# Common Qualcomm
+$(call inherit-product, device/samsung/qcom-common/qcom-common.mk)
