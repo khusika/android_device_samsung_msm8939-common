@@ -84,9 +84,6 @@ TARGET_HAVE_HDMI_OUT := false
 TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
 TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
-# Audio
-BOARD_USES_ALSA_AUDIO := true
-
 # Qualcomm support
 BOARD_USES_QCOM_HARDWARE := true
 TARGET_USES_NEW_ION_API :=true
