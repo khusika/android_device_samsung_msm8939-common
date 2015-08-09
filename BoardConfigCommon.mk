@@ -29,6 +29,15 @@ TARGET_BOARD_PLATFORM_GPU := qcom-adreno405
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8916
 
+# Kernel
+BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/mkbootimg.mk 
+BOARD_KERNEL_BASE := 0x80000000
+BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x3F ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci androidboot.selinux=permissive
+BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
+BOARD_RAMDISK_OFFSET     := 0x02000000
+
 # Architecture
 TARGET_CPU_VARIANT := cortex-a53
 ARCH_ARM_HAVE_TLS_REGISTER := true
